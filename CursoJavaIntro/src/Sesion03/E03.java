@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class E03 {
     public static  void main(String[] arStrings){
 
-        //Arreglos Enteros
+        //Matriz
 
         int [][] arregloEjemplo = new int[3][4];
         arregloEjemplo[0][0] = 20;
