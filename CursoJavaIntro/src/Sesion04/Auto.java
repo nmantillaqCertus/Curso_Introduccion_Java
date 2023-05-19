@@ -1,19 +1,73 @@
 package Sesion04;
 
 public class Auto {
-    String nombre = "Yaris";
-    String color = "Blanco";
-    String marca = "Toyota";
-    Integer anioFabricacion = 2023;
-    Double kilometraje = 0.4;
-    Double conbustible = 10.0;
+    String nombre;
+    String color;
+    String marca;
+    Integer anioFabricacion;
+    Double kilometraje;
+    Double capacidad; //litros
+    Double combustible; //combustible gastado en litros
 
+    public String getNombre() {
+        return nombre;
+    }
 
-    public static int calculoKM(int distancia){
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-        //Tarea: Siguiente clase
-        //Implementar la operacion para el calculo del gasto del combustible, a partir de la distancia indicada
+    public String getColor() {
+        return color;
+    }
 
-        return  456;
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public Integer getAnioFabricacion() {
+        return anioFabricacion;
+    }
+
+    public void setAnioFabricacion(Integer anioFabricacion) {
+        this.anioFabricacion = anioFabricacion;
+    }
+
+    public Double getKilometraje() {
+        return kilometraje;
+    }
+
+    public void setKilometraje(Double kilometraje) {
+        this.kilometraje = kilometraje;
+    }
+
+    public Double getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(Double capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public Double getCombustible() {
+        return combustible;
+    }
+
+    public void setCombustible(Double combustible) {
+        this.combustible = combustible;
+    }
+
+    // (LITROS CONSUMIDOS / KM RECORRIDOS) X 100
+    public static Double calculoKM(int distancia, double comGastado){
+        Double combGastadoFinal = (comGastado/distancia)*100;
+        return  combGastadoFinal;
     }
 }
