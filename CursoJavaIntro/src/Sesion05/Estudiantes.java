@@ -6,13 +6,21 @@ import java.util.List;
 public class Estudiantes {
     public static  void main(String[] arStrings){
 
-        Alumno alumnito = new Alumno();
+        Persona personita = new Persona();
+        Alumno alumnito = new Alumno(3,"Ingeniería de Software",555999);
 
         alumnito.setNombres("Fulanito");
-        alumnito.setCarrera("Ingeniería de Software");
-        alumnito.setCiclo(5);
+        alumnito.setApellidos("Gonzales Prada de las Casas");
+        //alumnito.setCiclo(5);
         alumnito.setEdad(20);
+        //alumnito.setCodAlumno(789456);
         alumnito.setGenero('M');
+
+        personita.setNombres("Alex");
+        personita.setApellidos("Paredes Barriga");
+
+        String datosCompletos = personita.nombreCompletos();
+        System.out.println(datosCompletos);
 
         ArrayList<Curso> cursitos = new ArrayList<>();
 
@@ -32,7 +40,8 @@ public class Estudiantes {
         alumnito.setCursos(cursitos);
         alumnito.setCodAlumno(123456789);
 
-        System.out.println("Nombre Alumno :"+alumnito.getNombres()+" y carrera: "+alumnito.getCarrera());
+        System.out.println("Nombre Alumno :"+alumnito.getNombres()+" y carrera: "+alumnito.getCarrera()+" Ciclo: "+alumnito.getCiclo());
+
         System.out.println("Lista de curso del alumno "+alumnito.getNombres());
 
         for (Curso c: alumnito.getCursos()) {

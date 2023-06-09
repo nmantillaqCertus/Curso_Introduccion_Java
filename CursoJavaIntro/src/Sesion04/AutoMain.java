@@ -9,6 +9,10 @@ public class AutoMain {
 
         solicitudes solicitudServicio =  new solicitudes();
         Auto autito =  new Auto();
+        autito.setNombre("Nombre Demo");
+
+        System.out.println("Nombre Demo Encapsulamiento: "+autito.getNombre());
+
 
         ArrayList<Auto> listadoAutos = new ArrayList<>();
         listadoAutos.add(autito);

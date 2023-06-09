@@ -9,6 +9,9 @@ public class Persona {
     private Integer peso;
     private char genero;
 
+    public  String nombreCompletos(){
+        return "Nombres Completos: "+this.nombres +", "+ this.apellidos;
+    }
 
     public String getNombres() {
         return nombres;

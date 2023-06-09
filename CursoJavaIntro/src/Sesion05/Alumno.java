@@ -9,6 +9,23 @@ public class Alumno extends Persona{
     private Integer codAlumno;
     private List<Curso> cursos;
 
+
+    public Alumno(){
+    }
+    public Alumno(String carrera){
+        this.carrera =  carrera;
+    }
+    public Alumno(Integer ciclo, String carrera, Integer codAlumno){
+        this.ciclo =  ciclo;
+        this.carrera =  carrera;
+        this.codAlumno =  codAlumno;
+    }
+
+    @Override
+    public  String nombreCompletos(){
+        return super.nombreCompletos()+" | COD: "+this.codAlumno;
+    }
+
     public Integer getCiclo() {
         return ciclo;
     }

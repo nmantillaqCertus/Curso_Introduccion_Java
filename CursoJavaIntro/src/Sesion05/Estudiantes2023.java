@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Estudiantes2023 {
     public static  void main(String[] arStrings){
-
         IAlumnoImplement alumno =  new IAlumnoImplement();
 
         Alumno alumnito = new Alumno();

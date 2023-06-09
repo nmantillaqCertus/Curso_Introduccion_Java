@@ -1,13 +1,13 @@
 package Sesion04;
 
 public class Auto {
-    String nombre;
-    String color;
-    String marca;
-    Integer anioFabricacion;
-    Double kilometraje;
-    Double capacidad; //litros
-    Double combustible; //combustible gastado en litros
+    private String nombre;
+    private String color;
+    private String marca;
+    private Integer anioFabricacion;
+    private Double kilometraje;
+    private Double capacidad; //litros
+    private Double combustible; //combustible gastado en litros
 
     public String getNombre() {
         return nombre;
