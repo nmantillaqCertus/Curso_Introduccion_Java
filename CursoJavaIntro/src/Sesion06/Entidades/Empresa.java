@@ -1,4 +1,4 @@
-package Sesion06;
+package Sesion06.Entidades;
 
 public class Empresa {
     private Integer cod_Empresa;

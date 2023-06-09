@@ -1,4 +1,4 @@
-package Sesion06;
+package Sesion06.Entidades;
 
 public class Comprobante extends Empresa{
     private Vendedor vendedor;

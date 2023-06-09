@@ -1,4 +1,4 @@
-package Sesion06;
+package Sesion06.Entidades;
 
 public class Producto extends  Categoria{
     private Integer cod_Producto;

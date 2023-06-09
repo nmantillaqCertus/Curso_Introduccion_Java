@@ -1,4 +1,4 @@
-package Sesion06;
+package Sesion06.Entidades;
 
 public class Vendedor extends Persona{
     private  Integer cod_Vendedor;
