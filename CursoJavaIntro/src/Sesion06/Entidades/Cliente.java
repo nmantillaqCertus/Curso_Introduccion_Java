@@ -1,10 +1,27 @@
 package Sesion06.Entidades;
-
+import java.lang.Long;
 public class Cliente extends Persona {
 
     private Integer cod_Cliente;
-    private Integer RUC;
+    private String RUC;
     private String ocupacion;
+    private Usuario usuario;
+
+    public String getRUC() {
+        return RUC;
+    }
+
+    public void setRUC(String RUC) {
+        this.RUC = RUC;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     public Integer getCod_Cliente() {
         return cod_Cliente;
@@ -14,13 +31,6 @@ public class Cliente extends Persona {
         this.cod_Cliente = cod_Cliente;
     }
 
-    public Integer getRUC() {
-        return RUC;
-    }
-
-    public void setRUC(Integer RUC) {
-        this.RUC = RUC;
-    }
 
     public String getOcupacion() {
         return ocupacion;

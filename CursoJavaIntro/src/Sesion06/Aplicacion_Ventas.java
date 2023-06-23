@@ -1,23 +1,58 @@
 package Sesion06;
 
-import Sesion06.Interfaces.ICliente;
+import Sesion06.Entidades.Producto;
+import Sesion06.Entidades.ResponseCliente;
+import Sesion06.Entidades.Usuario;
+import Sesion06.Repositorio.AutenticarImplements;
+import Sesion06.Repositorio.ClienteImplements;
+import Sesion06.Repositorio.ProductoImplements;
+
+import javax.swing.*;
+import java.util.ArrayList;
 
 public class Aplicacion_Ventas {
+
     public static  void main(String[] args){
 
-        /*
-        * Punto adicional a quien integre la interface con el metodo main
-        * */
+        ProductoImplements productos = new ProductoImplements();
 
-        ICliente icliente;
-
-        System.out.println();
+        //Cliente Autenticado
+        AutenticarImplements nuevoIngreso = new AutenticarImplements();
+        Usuario usuario = new Usuario();
 
 
+        String usuarioNuevo = JOptionPane.showInputDialog("Ingrese su usuario");
+        String contraseniaNueva = JOptionPane.showInputDialog("Ingrese su contraseña");
+        usuario.setUsuario(usuarioNuevo);
+        usuario.setPassword(contraseniaNueva);
+
+        nuevoIngreso.autentica( usuario);
+        ResponseCliente respueta = nuevoIngreso.autentica( usuario);
+
+        if (respueta.isExiste() && respueta.isDatosCorrectos()){
+
+            System.out.println("El cliente es: "+respueta.getCliente().getNombres());
+            var listaproductos = productos.listarProductos();
+
+            System.out.println("Producto: "+listaproductos.get(0).getNombre());
 
 
+            //Cliente Elegir Productos
+
+            //Cliente Elige Comprobante
+
+            //Cliente Realiza Pago
+
+            //Cliente visualizará su Comprobante con el detalle de sus productos y costo total
 
 
-
+        }else {
+            if (!respueta.isExiste()){
+                System.out.println("El cliente no existe");
+            }
+            if (!respueta.isDatosCorrectos()){
+                System.out.println("Usuario o contraseña incorrectos");
+            }
+        }
     }
 }

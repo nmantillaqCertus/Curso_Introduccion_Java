@@ -2,7 +2,7 @@ package Sesion06.Entidades;
 
 public class Categoria {
     private Integer cod_Categoria;
-    private String nombre;
+    private String nombreCategoria;
 
     public Integer getCod_Categoria() {
         return cod_Categoria;
@@ -12,11 +12,11 @@ public class Categoria {
         this.cod_Categoria = cod_Categoria;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCategoria() {
+        return nombreCategoria;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCategoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
     }
 }

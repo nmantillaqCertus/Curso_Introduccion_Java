@@ -10,18 +10,16 @@ public class Producto extends  Categoria{
         return cod_Producto;
     }
 
-    public void setCod_Producto(Integer cod_Producto) {
-        this.cod_Producto = cod_Producto;
-    }
-
-    @Override
     public String getNombre() {
         return nombre;
     }
 
-    @Override
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public void setCod_Producto(Integer cod_Producto) {
+        this.cod_Producto = cod_Producto;
     }
 
     public Double getPrecio_Unitario() {
