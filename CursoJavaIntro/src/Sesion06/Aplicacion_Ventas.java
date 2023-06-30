@@ -34,10 +34,19 @@ public class Aplicacion_Ventas {
             System.out.println("El cliente es: "+respueta.getCliente().getNombres());
             var listaproductos = productos.listarProductos();
 
-            System.out.println("Producto: "+listaproductos.get(0).getNombre());
 
+
+            ArrayList<String> codigos = new ArrayList<>();
+            for ( Producto productito : listaproductos ) {
+                System.out.println("Nombre del producto: "+productito.getNombre());
+                codigos.add(productito.getCod_Producto().toString());
+            }
 
             //Cliente Elegir Productos
+
+            String codProductoElegido = JOptionPane.showInputDialog("Ingrese su usuario");
+
+            var ListaProductosComprado = productos.procesarProductos(codigos);
 
             //Cliente Elige Comprobante
 
