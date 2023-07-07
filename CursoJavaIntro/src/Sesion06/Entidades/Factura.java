@@ -31,7 +31,7 @@ public class Factura extends Comprobante{
         this.IGV = IGV;
     }
 
-    public String getMetodo_Pago() {
+    public String getMetodo_Pago(String efectivo) {
         return metodo_Pago;
     }
 

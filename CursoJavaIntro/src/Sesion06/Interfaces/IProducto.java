@@ -8,5 +8,5 @@ import java.util.List;
 public interface IProducto {
     public List<Producto> listarProductos();
 
-    public List<Producto> procesarProductos(ArrayList<String> codigos );
+    public List<Producto> procesarProductos(String codigos );
 }

@@ -32,19 +32,48 @@ public class ProductoImplements implements IProducto {
         productito2.setNombreCategoria("Electrodomésticos");
         ListaProductos.add(productito2);
 
+        Producto productito3 = new Producto();
+        productito3.setCod_Producto(458);
+        productito3.setNombre("Televisor");
+        productito3.setPrecio_Unitario(2500.0);
+        productito3.setStock(10);
+        productito3.setCod_Categoria(1);
+        productito3.setNombreCategoria("Tecnología");
+        ListaProductos.add(productito3);
+
+        Producto productito4 = new Producto();
+        productito4.setCod_Producto(459);
+        productito4.setNombre("Computadora");
+        productito4.setPrecio_Unitario(7500.0);
+        productito4.setStock(10);
+        productito4.setCod_Categoria(1);
+        productito4.setNombreCategoria("Tecnología");
+        ListaProductos.add(productito4);
+
+        Producto productito5 = new Producto();
+        productito5.setCod_Producto(460);
+        productito5.setNombre("Edredon");
+        productito5.setPrecio_Unitario(250.0);
+        productito5.setStock(10);
+        productito5.setCod_Categoria(1);
+        productito5.setNombreCategoria("Textil");
+        ListaProductos.add(productito5);
+
         return ListaProductos;
     }
 
     @Override
-    public List<Producto> procesarProductos( ArrayList<String> codigos ) {
+    public List<Producto> procesarProductos( String codigos ) {
         ArrayList<Producto> ProductosComprados = new ArrayList<>();
 
-        for (int i=0; i< codigos.size(); i++){
-            // busqueda del codigfo del producto comprado en la lista de produtos disponibles
+        String [] listaCodigos = codigos.split(";");
+        for (String codigo : listaCodigos) {
+            for (Producto p : ListaProductos) {
+                if (p.getCod_Producto() == Integer.parseInt(codigo)){
+                    ProductosComprados.add(p);
+                }
+            }
         }
-
-        //ListaProductos
-
         return ProductosComprados;
     }
 }
